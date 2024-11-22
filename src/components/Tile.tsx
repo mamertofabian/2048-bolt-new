@@ -22,9 +22,9 @@ const colors: Record<number, string> = {
 };
 
 const getFontSize = (value: number): string => {
-  if (value < 100) return 'text-4xl';
-  if (value < 1000) return 'text-3xl';
-  return 'text-2xl';
+  if (value < 100) return 'text-3xl';
+  if (value < 1000) return 'text-2xl';
+  return 'text-xl';
 };
 
 export default function Tile({ value, position, isNew, isMerging }: TileProps) {
@@ -33,12 +33,12 @@ export default function Tile({ value, position, isNew, isMerging }: TileProps) {
   
   return (
     <div
-      className={`absolute flex items-center justify-center w-[72px] h-[72px] rounded-md font-bold transition-all duration-100
+      className={`absolute flex items-center justify-center w-16 h-16 rounded-md font-bold transition-all duration-100
         ${color} ${getFontSize(value)}
         ${isNew ? 'animate-pop-in' : ''}
         ${isMerging ? 'animate-merge' : ''}`}
       style={{
-        transform: `translate(${x * 80}px, ${y * 80}px)`
+        transform: `translate(${x * (64 + 16) + 16}px, ${y * (64 + 16) + 16}px)`
       }}
     >
       {value}

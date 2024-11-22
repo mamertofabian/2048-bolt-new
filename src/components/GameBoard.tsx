@@ -40,7 +40,7 @@ export default function GameBoard() {
 
   return (
     <div className="flex flex-col items-center gap-8 p-8">
-      <div className="flex items-center justify-between w-full max-w-[340px]">
+      <div className="flex items-center justify-between w-full max-w-[360px]">
         <div>
           <h1 className="text-4xl font-bold text-[#776e65]">2048</h1>
           <p className="text-[#776e65]">Join the tiles, get to 2048!</p>
@@ -57,7 +57,7 @@ export default function GameBoard() {
         </div>
       </div>
 
-      <div className="flex gap-4 w-full max-w-[340px]">
+      <div className="flex gap-4 w-full max-w-[360px]">
         <button
           onClick={resetGame}
           className="flex items-center gap-2 px-4 py-2 bg-[#8f7a66] text-white rounded-md hover:bg-[#7f6a56] transition-colors"
@@ -94,7 +94,7 @@ export default function GameBoard() {
         )}
       </div>
 
-      <div className="text-sm text-[#776e65] max-w-[340px]">
+      <div className="text-sm text-[#776e65] max-w-[360px]">
         <strong>HOW TO PLAY:</strong> Use your arrow keys to move the tiles. 
         When two tiles with the same number touch, they merge into one!
       </div>
